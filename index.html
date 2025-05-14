@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/style.css">
+  <title>GRID</title>
+</head>
+
+<body>
+  <section>
+    <h2>35. Multiple tracks in a track-list with auto-fill and minmax() - Varias pistas en una lista de pistas con
+      autocompletar y minmax()</h2>
+    <p>La sintaxis de repetición permite usar una lista de pistas en lugar de un solo valor, lo que permite repetir
+      listas de pistas más complejas. minmax()En esta lista de pistas, se puede usar el máximo de las pistas más grandes
+      2fry las más pequeñas 1fr. Esto significa que las pistas más grandes tendrán asignado más espacio sobrante.</p>
+    <div class="wrapper35">
+      <div class="box box1">1</div>
+      <div class="box box2">2</div>
+      <div class="box">3</div>
+      <div class="box">4</div>
+      <div class="box">5</div>
+      <div class="box">6</div>
+      <div class="box">7</div>
+      <div class="box">8</div>
+      <div class="box">9</div>
+      <div class="box">10</div>
+      <div class="box">11</div>
+      <div class="box">12</div>
+    </div>
+  </section>
+  <section>
+    <h2>36. Percentage based grids and gaps - Cuadrículas y espacios basados ​​en porcentajes</h2>
+    <p>Una cuadrícula con un ancho del 90%. Seis pistas de columnas del 10% cada una, cinco pistas de canal del 2% cada
+      una. La grid-gappropiedad controla columnas y filas, pero como la cuadrícula no tiene altura, el espacio entre
+      filas se resuelve en 0. Si le damos una altura a la cuadrícula, hay algo de lo que el 2% puede ser un porcentaje.
+      Así que obtenemos un espacio.
+    </p>
+    <p><em>Para ver el espacio necesitas Chrome 55 o Firefox.</em></p>
+    <p>Una cuadrícula con un ancho del 90%. Seis pistas de columnas del 10% cada una, cinco pistas de canal del 2% cada
+      una.</p>
+    <p>La propiedad grid-gap controla columnas y filas, pero como la cuadrícula no tiene altura,<a
+        href="https://github.com/w3c/csswg-drafts/issues/345#issuecomment-240333816">el espacio entre filas se resuelve
+        en 0</a>
+    </p>
+    <div class="wrapper36">
+      <div class="box box1">1</div>
+      <div class="box box2">2</div>
+      <div class="box">3</div>
+      <div class="box">4</div>
+      <div class="box">5</div>
+      <div class="box">6</div>
+      <div class="box">7</div>
+      <div class="box">8</div>
+      <div class="box">9</div>
+      <div class="box">10</div>
+      <div class="box">11</div>
+      <div class="box">12</div>
+    </div>
+    <p>Si le damos una altura a la cuadrícula, hay algo de lo que el 2% puede ser un porcentaje. Así que obtenemos un
+      espacio.</p>
+    <div class="wrapper36 with-height36">
+      <div class="box box1">1</div>
+      <div class="box box2">2</div>
+      <div class="box">3</div>
+      <div class="box">4</div>
+      <div class="box">5</div>
+      <div class="box">6</div>
+      <div class="box">7</div>
+      <div class="box">8</div>
+      <div class="box">9</div>
+      <div class="box">10</div>
+      <div class="box">11</div>
+      <div class="box">12</div>
+    </div>
+  </section>
+  <section>
+    <h2>37. auto-fill vs. auto-fit - autocompletar vs. autoajustar</h2>
+    <p>Demostración de la diferencia entre las palabras clave de autocompletar y autoajustar. Especifique aquí y
+      necesitará Chrome 55 o Firefox con la cuadrícula habilitada para ver la diferencia.En el primer ejemplo, usamos la
+      palabra clave de autocompletar para la repetición. Obtenemos tantas pistas con un mínimo de 200 píxeles y un
+      máximo de 1 fr como quepan en el contenedor. En el segundo ejemplo, usamos la palabra clave auto-fit para la
+      repetición. Obtenemos tantas pistas con un mínimo de 200 píxeles y un máximo de 1 fr como quepan en el contenedor.
+      Después de la colocación automática, las pistas vacías se contraen a 0. De este modo, nuestros elementos pueden
+      expandirse para ocupar el espacio restante.
+
+    </p>
+    <div class="wrapper37">
+      <div class="box">1</div>
+      <div class="box">2</div>
+      <div class="box">3</div>
+    </div>
+
+    <div class="wrapper37-1">
+      <div class="box">1</div>
+      <div class="box">2</div>
+      <div class="box">3</div>
+    </div>
+  </section>
+  <section>
+    <h2 class="nivel2">Ejemplos de cuadrícula CSS de nivel 2</h2>
+  </section>
+  <section>
+    <h2>38. Subgrid on columns and rows - Subcuadrícula en columnas y filas</h2>
+    <p>Para definir una subcuadrícula en ambas dimensiones (columnas y filas), utilice el valor subgridde un elemento de
+      la cuadrícula principal como valor de grid-template-columnsy grid-template-rows. La cuadrícula anidada ahora está
+      vinculada al número de pistas y dimensiones de la cuadrícula principal.</p>
+    <div class="wrapper38">
+      <div class="box a">A</div>
+      <div class="box b">B</div>
+      <div class="box c">C</div>
+      <div class="box d">
+        <div class="box e">E</div>
+        <div class="box f">F</div>
+        <div class="box g">G</div>
+      </div>
+    </div>
+  </section>
+  <section>
+    <h2>39. Subgrid on columns, implicit grid rows- Subcuadrícula en columnas, filas de cuadrícula implícitas</h2>
+    <p>Para definir una subcuadrícula en columnas, use solo el valor subgridde un elemento de la cuadrícula principal
+      como valor de grid-template-columns. Ahora, las filas se pueden definir con una lista de pistas como de costumbre
+      grid-template-rowso se puede usar una cuadrícula implícita como siempre. Cualquier cuadrícula creada para filas
+      será solo para la subcuadrícula, y la fila de la cuadrícula principal que la contiene crecerá hasta alcanzar el
+      tamaño suficiente para contener el contenido (suponiendo que tenga un autotamaño basado en el contenido u otro).
+    </p>
+    <div class="wrapper39">
+      <div class="box a">A</div>
+      <div class="box b">B</div>
+      <div class="box c">C</div>
+      <div class="box d">
+        <div class="box e">E</div>
+        <div class="box f">F</div>
+        <div class="box g">G</div>
+        <div class="box h">H</div>
+        <div class="box i">I</div>
+        <div class="box j">J</div>
+        <div class="box k">K</div>
+      </div>
+    </div>
+  </section>
+  <section>
+    <h2>40. Subgrid on rows, defined column tracks- Subcuadrícula en filas, pistas de columnas definidas </h2>
+    <p>Para definir una subcuadrícula en filas, utilice solo el valor subgridde un elemento de la cuadrícula del padre
+      como el valor de grid-template-rows.En este ejemplo, he creado pistas de cuadrícula para las columnas de la
+      subcuadrícula usando grid-template-columns: 1fr 1fr 1fr. Estas pistas de columna encajarán dentro del área donde
+      se coloca la cuadrícula anidada, igual que con una cuadrícula anidada normal.</p>
+    <div class="wrapper40">
+      <div class="box a">A</div>
+      <div class="box b">B</div>
+      <div class="box c">C</div>
+      <div class="box d">
+        <div class="box e40">E</div>
+        <div class="box f40">F</div>
+        <div class="box g40">G</div>
+      </div>
+    </div>
+  </section>
+  <section>
+    <h2>41. The subgrid can override the gap on the parent - La subcuadrícula puede anular el espacio en la cuadrícula
+      principal.</h2>
+    <p>La subcuadrícula hereda el espacio definido en la cuadrícula principal por defecto. Sin embargo , se pueden
+      asignar propiedades o valores diferentes a un elemento de la subcuadrícula gap. En este ejemplo, la cuadrícula
+      principal tiene un espacio de 10 px definido, mientras que la subcuadrícula está establecida en
+      0.row-gapcolumn-gaprow-gap</p>
+    <div class="wrapper41">
+      <div class="box a">A</div>
+      <div class="box b">B</div>
+      <div class="box c">C</div>
+      <div class="box d">
+        <div class="box e">E</div>
+        <div class="box f">F</div>
+        <div class="box g">G</div>
+        <div class="box h">H</div>
+        <div class="box i">I</div>
+      </div>
+    </div>
+  </section>
+  <section>
+    <h2>42. No implicit grid in subgridded dimension - No hay cuadrícula implícita en la dimensión de subcuadrícula</h2>
+    <p>Las dimensiones de la subcuadrícula no tienen una cuadrícula implícita. Esto significa que si se colocan
+      demasiados elementos automáticamente en esta subcuadrícula o se coloca un elemento fuera de ella, se aplicarán las
+      mismas reglas que para fijar cuadrículas demasiado grandes . Esto significa que, en nuestro ejemplo, los elementos
+      adicionales se colocan en la última fila de la cuadrícula.</p>
+    <div class="wrapper42">
+      <div class="box a">A</div>
+      <div class="box b">B</div>
+      <div class="box c">C</div>
+      <div class="box d">
+        <div class="box e">E</div>
+        <div class="box f">F</div>
+        <div class="box g">G</div>
+        <div class="box h">H</div>
+        <div class="box i">I</div>
+        <div class="box j">J</div>
+        <div class="box k">K</div>
+        <div class="box l">L</div>
+        <div class="box m">M</div>
+      </div>
+    </div>
+  </section>
+  <section>
+    <h2>43. Line names on the parent are passed into the subgrid - Los nombres de línea del padre se pasan a la
+      subcuadrícula</h2>
+    <p>Si define nombres de línea en su cuadrícula principal, estos se transferirán al elemento de la subcuadrícula.
+      Esto significa que puede posicionar elementos secundarios utilizando los nombres de línea de la cuadrícula
+      definidos en la cuadrícula principal.</p>
+    <div class="wrapper43">
+      <div class="box a">A</div>
+      <div class="box b">B</div>
+      <div class="box c">C</div>
+      <div class="box d">
+        <div class="box e43">E</div>
+        <div class="box f43">F</div>
+        <div class="box g43">G</div>
+      </div>
+    </div>
+  </section>
+  <section>
+    <h2>44. Line names on the child are added to those from the parent - Los nombres de las líneas del hijo se agregan a
+      los del padre</h2>
+    <p>Si define nombres de línea en la subcuadrícula, estos se agregan a cualquier línea definida en la cuadrícula
+      principal.Los nombres de línea se agregan a una subcuadrícula, enumerando los nombres después de la palabra clave
+      subcuadrícula, por ejemplo grid-template-columns: subgrid [sub-1] [sub-2] [sub-3] [sub-4];.</p>
+    <div class="wrapper44">
+      <div class="box a">A</div>
+      <div class="box b">B</div>
+      <div class="box c">C</div>
+      <div class="box d">
+        <div class="box e44">E</div>
+        <div class="box f44">F</div>
+        <div class="box g44">G</div>
+      </div>
+    </div>
+  </section>
+  <section>
+    <h2>Padding is honored on the subgrid - Se respeta el relleno en la subcuadrícula</h2>
+    <p>Si se añade relleno a la subcuadrícula, esto se respeta. En nuestro ejemplo, he añadido 50 px de relleno a la
+      subcuadrícula. Por lo tanto, las pistas de la primera y la última columna se reducen, ya que el relleno ocupa
+      espacio. Sin embargo, todo sigue alineado con las pistas principales.</p>
+    <div class="wrapper45">
+      <div class="box a">A</div>
+      <div class="box b">B</div>
+      <div class="box c">C</div>
+      <div class="box d">
+        <div class="box e45">E</div>
+        <div class="box f45">F</div>
+        <div class="box g45">G</div>
+      </div>
+    </div>
+  </section>
+  <section>
+    <h2>Margin is honored on the subgrid - El margen se respeta en la subcuadrícula</h2>
+    <p>Si se añaden márgenes a la subcuadrícula, esto se respeta. En nuestro ejemplo, he añadido 50 px de margen a la
+      subcuadrícula. Por lo tanto, las pistas de la primera y la última columna se reducen, ya que el margen ocupa
+      espacio. Sin embargo, todo sigue alineado con las pistas principales.</p>
+    <div class="wrapper46">
+      <div class="box a">A</div>
+      <div class="box b">B</div>
+      <div class="box c">C</div>
+      <div class="box d">
+        <div class="box e46">E</div>
+        <div class="box f46">F</div>
+        <div class="box g46">G</div>
+      </div>
+    </div>
+  </section>
+
+</body>
+
+</html>
